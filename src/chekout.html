@@ -8,7 +8,9 @@
    <link rel="stylesheet" href="/src/output.css" />
 </head>
 
-<body class="bg-slate-800 ">
+
+
+<body class="bg-slate-800  ">
    <!-- Container Halaman Checkout -->
    <div class="max-w-4xl mx-auto mt-1 p-6  bg-slate-800 rounded-lg shadow-md">
       <h1
@@ -24,25 +26,25 @@
          <div>
             <label for="name" class="block font-medium text-white mb-1">Nama</label>
             <input type="text" id="name" name="name" placeholder="Masukkan nama kamu" required
-               class="w-full p-3 border rounded-md focus:outline-none focus:ring-2  focus:bg-transparent text-black focus:text-white focus:ring-blue-500">
+               class="w-full p-3 border rounded-md focus:outline-none focus:ring-2  focus:bg-transparent text-blue-500 focus:text-white focus:ring-blue-500  placeholder-gray-600">
          </div>
 
          <div>
             <label for="namaAkun" class="block font-medium text-white mb-1">Nama Akun ML</label>
             <input type="text" id="namaAkun" name="namaAkun" placeholder="Masukkan nama akun" required
-               class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:bg-transparent text-black focus:text-white focus:ring-blue-500">
+               class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:bg-transparent text-blue-500  focus:text-white focus:ring-blue-500 placeholder-gray-600">
          </div>
 
          <div>
             <label for="rankSaatIni" class="block font-medium text-white  mb-1">Rank Saat Ini</label>
             <input type="text" id="rankSaatIni" name="rankSaatIni" placeholder="Contoh: Honor bintang 25" required
-               class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:bg-transparent text-black focus:text-white focus:ring-blue-500">
+               class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:bg-transparent text-blue-500  focus:text-white focus:ring-blue-500 placeholder-gray-600">
          </div>
 
          <div>
             <label for="rankYangDituju" class="block font-medium text-white  mb-1">Rank Yang Dituju</label>
             <input type="text" id="rankYangDituju" name="rankYangDituju" placeholder="Contoh: Glory bintang 50" required
-               class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:bg-transparent text-black focus:text-white focus:ring-blue-500">
+               class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:bg-transparent text-blue-500  focus:text-white focus:ring-blue-500 placeholder-gray-600">
          </div>
 
 
@@ -50,7 +52,7 @@
          <div>
             <label for="package" class="block font-medium text-white  mb-1">Pilih Paket Joki</label>
             <select id="package" name="package" required
-               class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:bg-transparent text-black focus:text-white focus:ring-blue-500">
+               class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:bg-transparent text-blue-500  focus:text-white focus:ring-blue-500 placeholder-gray-600 ">
                <option value="" class="text-black">-- Pilih Paket --</option>
                <option value="Warrior - Elite" class="text-black">Grand Master (Rp. 4.000/Bintang)</option>
                <option value="Epic (Rp. 5.000/Bintang)" class="text-black">Epic (Rp. 5.000/Bintang)</option>
@@ -67,12 +69,12 @@
             <label for="notes" class="block font-medium text-white  mb-1">Catatan Tambahan</label>
             <textarea id="notes" name="notes" rows="4"
                placeholder="Tulis catatan jika ada... Req hero dan yang lainnya. (Opsional)"
-               class="w-full p-3 mb-10 border rounded-md focus:outline-none focus:ring-2 focus:bg-transparent text-black focus:text-white focus:ring-blue-500"></textarea>
+               class="w-full p-3 mb-10 border rounded-md focus:outline-none focus:ring-2 focus:bg-transparent text-blue-500  focus:text-white focus:ring-blue-500 placeholder-gray-600"></textarea>
          </div>
 
          <!-- Tombol Submit -->
          <button type="button" onclick="submitForm()"
-            class="w-full flex  justify-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 hover:shadow-lg hover:scale-105 transform transition-all duration-300">
+            class="w-full flex  justify-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 hover:shadow-lg hover:scale-105 transform transition-all duration-300 mb-5">
             Pesan Sekarang
          </button>
       </form>
