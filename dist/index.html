@@ -12,7 +12,7 @@
 
 <body>
    <!-- Navbar -->
-   <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+   <nav class="bg-white dark:bg-gray-900/20 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600/20">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
          <a href="/src/chekout.html" class="flex items-center space-x-3 rtl:space-x-reverse">
             <span class="self-center text-2xl font-extrabold whitespace-nowrap dark:text-white">Victory<span
@@ -37,9 +37,9 @@
 
          <!-- Navbar Menu -->
          <div id="navbar-sticky"
-            class="hidden w-full md:flex md:w-auto md:order-1 transition-transform transform md:translate-x-0 duration-300 ease-in-out">
+            class="hidden w-full md:flex md:w-auto md:order-1 transition-transform transform md:translate-x-0 duration-300 ease-in-out ">
             <ul
-               class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+               class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50/20 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                <li>
                   <a href="#home" id="home-link" data-scroll
                      class="inline-block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
@@ -88,7 +88,7 @@
                </svg>
             </a>
             <a href="#about"
-               class="inline-flex justify-center items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white hover:text-white rounded-lg border border-white  hover:bg-blue-800/50  focus:ring-4 focus:ring-gray-400">
+               class="inline-flex justify-center items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white hover:text-white rounded-lg border border-white hover:bg-blue-600/20  focus:ring-4 focus:ring-gray-400">
                Learn more
             </a>
          </div>
@@ -474,10 +474,12 @@
    </footer>
 
 
+
+
+
    <!-- SCRIPT JS -->
    <script>
-
-      // layar HP
+       // layar HP
       // Ambil elemen tombol hamburger, menu navbar, dan semua link navbar
       const toggleButton = document.querySelector('[data-collapse-toggle="navbar-sticky"]');
       const navbarMenu = document.getElementById('navbar-sticky');
@@ -591,7 +593,6 @@
 
 
    </script>
-
 </body>
 
 </html>
