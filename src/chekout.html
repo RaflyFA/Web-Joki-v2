@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Halaman Chekout</title>
+   <link rel="stylesheet" href="/src/output.css" />
+</head>
+
+<body class="bg-slate-800 ">
+   <!-- Container Halaman Checkout -->
+   <div class="max-w-4xl mx-auto mt-1 p-6  bg-slate-800 rounded-lg shadow-md">
+      <h1
+         class="py-3 pt-6 text-2xl font-bold tracking-tight text-center leading-none text-white lg:text-4xl md:text-5xl sm:px-16">
+         Halaman Chekout</h1>
+      <div class="flex justify-center">
+         <div class="w-16 bg-blue-600 rounded-lg h-2 mb-8 ">
+         </div>
+      </div>
+      <!-- Form Checkout -->
+      <form id="checkoutForm" class="space-y-3 ">
+         <!-- Input Nama -->
+         <div>
+            <label for="name" class="block font-medium text-white mb-1">Nama</label>
+            <input type="text" id="name" name="name" placeholder="Masukkan nama kamu" required
+               class="w-full p-3 border rounded-md focus:outline-none focus:ring-2  focus:bg-transparent text-black focus:text-white focus:ring-blue-500">
+         </div>
+
+         <div>
+            <label for="namaAkun" class="block font-medium text-white mb-1">Nama Akun ML</label>
+            <input type="text" id="namaAkun" name="namaAkun" placeholder="Masukkan nama akun" required
+               class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:bg-transparent text-black focus:text-white focus:ring-blue-500">
+         </div>
+
+         <div>
+            <label for="rankSaatIni" class="block font-medium text-white  mb-1">Rank Saat Ini</label>
+            <input type="text" id="rankSaatIni" name="rankSaatIni" placeholder="Contoh: Honor bintang 25" required
+               class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:bg-transparent text-black focus:text-white focus:ring-blue-500">
+         </div>
+
+         <div>
+            <label for="rankYangDituju" class="block font-medium text-white  mb-1">Rank Yang Dituju</label>
+            <input type="text" id="rankYangDituju" name="rankYangDituju" placeholder="Contoh: Glory bintang 50" required
+               class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:bg-transparent text-black focus:text-white focus:ring-blue-500">
+         </div>
+
+
+         <!-- Daftar Paket -->
+         <div>
+            <label for="package" class="block font-medium text-white  mb-1">Pilih Paket Joki</label>
+            <select id="package" name="package" required
+               class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:bg-transparent text-black focus:text-white focus:ring-blue-500">
+               <option value="" class="text-black">-- Pilih Paket --</option>
+               <option value="Warrior - Elite" class="text-black">Grand Master (Rp. 4.000/Bintang)</option>
+               <option value="Epic (Rp. 5.000/Bintang)" class="text-black">Epic (Rp. 5.000/Bintang)</option>
+               <option value="Legend (Rp. 7.000/Bintang)" class="text-black">Legend (Rp. 7.000/Bintang)</option>
+               <option value="Mythic (Rp. 8.000/Bintang)" class="text-black">Mythic (Rp. 8.000/Bintang)</option>
+               <option value="Honor (Rp. 10.000/Bintang" class="text-black">Honor (Rp. 10.000/Bintang</option>
+               <option value="Glory (Rp. 15.000/Bintang)" class="text-black">Glory (Rp. 15.000/Bintang)</option>
+               <option value="Immortal (Rp. 20.000/Bintang)" class="text-black">Immortal (Rp. 20.000/Bintang)</option>
+            </select>
+         </div>
+
+         <!-- Input Catatan Tambahan -->
+         <div>
+            <label for="notes" class="block font-medium text-white  mb-1">Catatan Tambahan</label>
+            <textarea id="notes" name="notes" rows="4"
+               placeholder="Tulis catatan jika ada... Req hero dan yang lainnya. (Opsional)"
+               class="w-full p-3 mb-10 border rounded-md focus:outline-none focus:ring-2 focus:bg-transparent text-black focus:text-white focus:ring-blue-500"></textarea>
+         </div>
+
+         <!-- Tombol Submit -->
+         <button type="button" onclick="submitForm()"
+            class="w-full flex  justify-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 hover:shadow-lg hover:scale-105 transform transition-all duration-300">
+            Pesan Sekarang
+         </button>
+      </form>
+   </div>
+
+   <script>
+      function submitForm() {
+         // Ambil data form
+         const name = document.getElementById('name').value;
+         const namaAkun = document.getElementById('namaAkun').value;
+         const rankSaatIni = document.getElementById('rankSaatIni').value;
+         const rankYangDituju = document.getElementById('rankYangDituju').value;
+         const packageSelected = document.getElementById('package').value;
+         const notes = document.getElementById('notes').value;
+
+         // Validasi sederhana
+         if (!name || !namaAkun || !rankSaatIni || !rankYangDituju || !packageSelected) {
+            alert('Harap lengkapi semua kolom yang wajib diisi!');
+            return;
+         }
+
+         // Format pesan WhatsApp
+         const message = `JOKI MLBB VICTORYJOKI 🔥\nHai min, saya ingin memesan joki ML:\n\n` +
+            `Nama                      : ${name}\n` +
+            `Nama Akun ML       : ${namaAkun}\n` +
+            `Rank Saat Ini           : ${rankSaatIni}\n` +
+            `Rank Yang Dituju    : ${rankYangDituju}\n` +
+            `Paket Joki                : ${packageSelected}\n` +
+            `Catatan Tambahan  : ${notes}\n\n` +
+            `Nb : Proses akan dimulai jika sudah melakukan pembayaran\nKirimkan Bukti pembayaran (Screenshot).`;
+
+         // Encode pesan agar aman di URL
+         const encodedMessage = encodeURIComponent(message);
+
+         // Ganti nomor dengan nomor WhatsApp kamu (format: 62 untuk kode negara Indonesia)
+         const phoneNumber = '6285860948393'; // Ganti dengan nomor WA kamu
+
+         // Buat URL WhatsApp
+         const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+
+         // Redirect ke WhatsApp
+         window.open(whatsappURL, '_blank');
+      }
+
+   </script>
+
+</body>
+
+</html>
